@@ -4,14 +4,15 @@
 
   <a href="https://apps.apple.com/us/app/ai-keyboard-smart-writing/id6446992925">App Store</a> 
 
-    
+因为上面的App曾经以**Chatrun**命名，故本项目暂以此命名
+
 #### 支持的模型id
 
 gpt-4.1✅
 
 gpt-5.4-mini✅
 
-gpt--5-nano✅
+gpt-5-nano✅
 
 claude-haiku-4-5✅
 
