@@ -29,12 +29,12 @@ function calling支持有限
 
 测试示例
 
- 	curl -X POST 'http://127.0.0.1:89/v1/chat/completions' \
+ 	curl -X POST 'http://127.0.0.1:80/v1/chat/completions' \
  	--header 'Content-Type: application/json' \
  	--data '{"stream":false,"messages":[{"role":"user","content":"hello"}],"model":"gpt-5.4-mini"}'
 
 支持deepseek-flash\grok-4.20-0309-non-reasoning当model id以deepseek\grok开头时自动走响应逻辑
 
-其他model id会被上游自动替换gpt-5-nano，o3-mini返回gpt-5.4-mini
+其他model id活不填model会被上游自动替换gpt-5-nano，而o3-mini返回gpt-5.4-mini
 
 ~~更多API联系📧patches.camera_0m@icloud.com~~
