@@ -93,12 +93,12 @@ jobs:
           if (-not $jar) {
             Write-Error "No fat JAR found in target"; exit 1
           }
-      
+
           # 创建 native-image 目录并准备文件
           New-Item -ItemType Directory -Force -Path target\native-image
           Copy-Item -Path config -Destination target\native-image\ -Recurse -Force
           Copy-Item -Path $jar.FullName -Destination target\native-image\
-      
+
           # 进入目录开始构建
           Push-Location target\native-image
           native-image.cmd `
