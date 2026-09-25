@@ -35,6 +35,6 @@ function calling支持有限
 
 支持deepseek-flash\grok-4.20-0309-non-reasoning当model id以deepseek\grok开头时自动走响应逻辑
 
-其他model id活不填model会被上游自动替换gpt-5-nano，而o3-mini返回gpt-5.4-mini
+其他model id或不填model会被上游自动替换**gpt-5-nano**，而**o3-mini**返回**gpt-5.4-mini**
 
 ~~更多API联系📧patches.camera_0m@icloud.com~~
