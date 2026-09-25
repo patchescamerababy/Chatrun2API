@@ -1,6 +1,6 @@
 本项目是一个 OpenAI API 兼容的服务端程序
 
-多个APP使用类似的API，尽管域名不同，其中一个
+多个APP使用类似的API，尽管它们的域名不同。其中一个为
 
   <a href="https://apps.apple.com/us/app/ai-keyboard-smart-writing/id6446992925">App Store</a> 
 
