@@ -51,11 +51,7 @@ public class Client {
      * 保留现有固定代理；客户端共享不限制同步 Call 的并发执行。
      */
     private static final class SharedClient {
-        private static final OkHttpClient INSTANCE = createOkHttpClient(
-//                getSystemProxy()
-
-                new Proxy(Proxy.Type.HTTP, new InetSocketAddress("192.168.8.148", 8888))
-        );
+        private static final OkHttpClient INSTANCE = createOkHttpClient(getSystemProxy());
     }
 
     public static OkHttpClient getOkHttpClient() {
