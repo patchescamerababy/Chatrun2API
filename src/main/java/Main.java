@@ -166,23 +166,22 @@ public class Main {
             String cs = System.getProperty("chatrun.charset");
             
             // 如果未指定charset，根据运行环境和操作系统设置默认值
-//            if (cs == null) {
-//                boolean isWindows = System.getProperty("os.name").toLowerCase().contains("windows");
-//                boolean isAot = isRunningInAot();
-//
-//                // 在AOT编译下，Windows默认GBK，其他系统默认UTF-8
-//                if (isAot) {
-//                    cs = isWindows ? "GBK" : "UTF-8";
-//                    System.out.println("Running in AOT mode, default charset: " + cs);
-//                } else {
-//                    // 非AOT环境下，使用系统默认编码
-//                    cs = System.getProperty("file.encoding", isWindows ? "GBK" : "UTF-8");
-//                    System.out.println("Running in JVM mode, default charset: " + cs);
-//                }
-//
-//                System.setProperty("chatrun.charset", cs);
-//            }
-//
+            if (cs == null) {
+                boolean isWindows = System.getProperty("os.name").toLowerCase().contains("windows");
+                boolean isAot = isRunningInAot();
+
+                // 在AOT编译下，Windows默认GBK，其他系统默认UTF-8
+                if (isAot) {
+                    cs = isWindows ? "GBK" : "UTF-8";
+                    System.out.println("Running in AOT mode, default charset: " + cs);
+                } else {
+                    // 非AOT环境下，使用系统默认编码
+                    cs = System.getProperty("file.encoding", isWindows ? "GBK" : "UTF-8");
+                    System.out.println("Running in JVM mode, default charset: " + cs);
+                }
+
+                System.setProperty("chatrun.charset", cs);
+            }
             try {
                 java.io.OutputStream os = System.out;  // 获取 System.out 的 OutputStream
                 PrintStream ps = new PrintStream(os, true, cs);
